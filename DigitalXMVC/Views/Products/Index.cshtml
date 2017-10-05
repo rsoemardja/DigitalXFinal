@@ -1,0 +1,74 @@
+﻿@model IEnumerable<DigitalXData.Product>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Index</h2>
+
+<p>
+   <!-- @Html.ActionLink("Create New", "Create") -->
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitsInStock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDiscontinued)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductSubCategory.SubCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Retailer.Retailer1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitsInStock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Picture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDiscontinued)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductSubCategory.SubCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Retailer.Retailer1)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.ProductID }) 
+            @Html.ActionLink("Add to Cart" ,"AddToCart", new { product=item })     
+        </td>
+    </tr>
+}
+
+</table>

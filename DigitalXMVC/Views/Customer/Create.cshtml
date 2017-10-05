@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+@model DigitalXMVC.ViewModels.CustomerViewModel
+
+<h2>Sign Up</h2>
+
+@using (Html.BeginForm("Create", "Customer"))
+{
+    <table>
+        <tr>
+            <td>@Html.LabelFor(model => model.Customer.CustomerID)</td>
+            <td> @Html.TextBoxFor(model => model.Customer.CustomerID)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Customer.FirstName)</td>
+            <td> @Html.TextBoxFor(model => model.Customer.FirstName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Customer.LastName)</td>
+            <td> @Html.TextBoxFor(model => model.Customer.LastName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Customer.UserName)</td>
+            <td> @Html.TextBoxFor(model => model.Customer.UserName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Customer.Password)</td>
+            <td> @Html.TextBoxFor(model => model.Customer.Password)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Customer.Email)</td>
+            <td> @Html.TextBoxFor(model => model.Customer.Email)</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="save" /></td>
+        </tr>
+    </table>
+}

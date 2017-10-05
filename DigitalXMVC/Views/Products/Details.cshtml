@@ -1,0 +1,82 @@
+﻿@model DigitalXData.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitsInStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitsInStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDiscontinued)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDiscontinued)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductSubCategory.SubCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductSubCategory.SubCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Retailer.Retailer1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Retailer.Retailer1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
